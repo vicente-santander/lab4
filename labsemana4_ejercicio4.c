@@ -117,17 +117,16 @@ void print(Patient *head){
 	int i = 1;
 	int j = 0;
 	while(head != NULL){
-	printf("%d. nombre: %s\n",i,head->name);
-	printf("   edad: %d\n",head->age);
-	printf("   habitacion: %d\n",head->room);
-	for(j=0;j<head->conttemp;j++){
-		printf("   temperatura %d: %.1f\n",j+1,head->temperature[j]);
+		printf("%d. nombre: %s\n",i,head->name);
+		printf("   edad: %d\n",head->age);
+		printf("   habitacion: %d\n",head->room);
+		for(j=0;j<head->conttemp;j++){
+			printf("   temperatura %d: %.1f\n",j+1,head->temperature[j]);
+		}
+		head = head->next;
+		i++;
 	}
-	head = head->next;
-	i++;
-	}
-	printf("-----------------------------\n");
-	
+	printf("-----------------------------\n");	
 	
 }
 
